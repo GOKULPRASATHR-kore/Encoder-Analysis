@@ -4,11 +4,11 @@
 This repository contains the code and instructions for analyzing the Universal Sentence Encoder-5 (USE-5) model for embedding generation. The primary focus is on analyzing the impact of proper nouns within sentence embeddings.
 
 ## Progress
-- [X] Model download and setup
-- [X] Utterance generation
-- [X] Embedding generation
-- [X] Cosine score generation
-- [X] Results Excel Sheet generation
+-  Model download and setup
+-  Utterance generation
+-  Embedding generation
+-  Cosine score generation
+-  Results Excel Sheet generation
 
 ## Prerequisites
 
@@ -32,7 +32,6 @@ Download the USE-5 model from the Huggingface repository:
 
 Here's a sample code snippet to load the ONNX model and generate embeddings:
 
-```python
 import onnx
 import onnxruntime as ort
 from onnxruntime_extensions import get_library_path
@@ -52,8 +51,8 @@ model = load_onnx_model("<path-to-onnx-model>")
 
 model_outputs = model.run(output_names=["outputs"], input_feed={"inputs": sentences})[0]
 print(model_outputs)
-```
+
+## NOTE
 
 Replace `<path-to-onnx-model>` with the actual path to your downloaded ONNX model file.
-
 If the model is loaded and executed correctly, it will produce an embedding array.
